@@ -104,7 +104,7 @@
             </a>
             <p>Ou envie uma mensagem:</p>
             <!-- Formulário simples (pode conectar com Formspree ou similar depois) -->
-            <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
+            <form onsubmit="enviarWhats(); return false;">
                 <input type="text" name="nome" placeholder="Seu nome" required>
                 <input type="tel" name="telefone" placeholder="Telefone">
                 <textarea name="mensagem" placeholder="Descreva o problema..." required></textarea>
@@ -122,17 +122,19 @@
     </footer>
 
     <script>
-        // JS simples para scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+function enviarWhats() {
+    let nome = document.querySelector('input[name="nome"]').value;
+    let telefone = document.querySelector('input[name="telefone"]').value;
+    let mensagem = document.querySelector('textarea[name="mensagem"]').value;
+
+    let texto = `Olá, meu nome é ${nome}
+📞 Telefone: ${telefone}
+⚡ Problema: ${mensagem}`;
+
+    let url = `https://wa.me/5521990670499?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank');
+}
+</script>
 </body>
 </html>
