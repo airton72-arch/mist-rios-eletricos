@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misterios Eletricos ⚡</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Mistérios Eletricos  <span class="bolt">⚡</span></h1>
+            </div>
+            <nav>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Eletricista Residencial em São Gonçalo e Região</h2>
+            <p>Atendimento rápido, seguro e com qualidade. Instalações, reparos, troca de tomadas, chuveiros, disjuntores e muito mais.</p>
+            <a href="https://wa.me/5521990670499" target="_blank" class="btn-whatsapp">
+                📲 Chamar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🔌</div>
+                    <h3>Troca de Tomadas</h3>
+                    <p>Substituição e instalação de tomadas com segurança e acabamento profissional.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚿</div>
+                    <h3>Instalação de Chuveiro</h3>
+                    <p>Instalação correta e segura de chuveiros e resistências.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Disjuntores e Quadros</h3>
+                    <p>Troca, revisão e identificação de problemas no quadro elétrico.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <h3>Iluminação</h3>
+                    <p>Instalação de luminárias, lustres, refletores e manutenção em circuitos de luz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre o Mistérios Eletricos </h2>
+            <p>Olá, sou Airton, eletricista em formação pelo SENAI-RJ. Trabalho com serviços elétricos residenciais com foco em segurança, agilidade e qualidade. Atendo São Gonçalo e região metropolitana do Rio de Janeiro.</p>
+            <p>Utilizo equipamentos profissionais (Fluke) e sigo as normas técnicas (NBR 5410 e NR-10) para garantir um serviço confiável e duradouro.</p>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS (opcional) -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2 class="section-title">O que meus clientes dizem</h2>
+            <div class="cards">
+                <div class="card">
+                    <p>"Atendeu super rápido e resolveu o problema do chuveiro no mesmo dia. Recomendo!"</p>
+                    <strong>— Maria Silva, São Gonçalo</strong>
+                </div>
+                <div class="card">
+                    <p>"Troca de disjuntor feita com capricho e explicação clara. Profissional sério."</p>
+                    <strong>— João Oliveira</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+     <section id="contato" class="contato">
+    <div class="container">
+
+        <!-- LOGO PEQUENO -->
+        <div class="logo-contato">
+            <img src="logo-misterios-eletricos.png" alt="Logo">
+        </div>
+       <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <a href="https://wa.me/5521990670499" target="_blank" class="btn-whatsapp large">
+                📲 Falar no WhatsApp (21) 99067-0499
+            </a>
+            <p>Ou envie uma mensagem:</p>
+            <!-- Formulário simples (pode conectar com Formspree ou similar depois) -->
+            <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="tel" name="telefone" placeholder="Telefone">
+                <textarea name="mensagem" placeholder="Descreva o problema..." required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 mistérios eletricos - eletricista - São Gonçalo, RJ</p>
+            <p>Eletricista em formação • SENAI-RJ</p>
+        </div>
+    </footer>
+
+    <script>
+        // JS simples para scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
